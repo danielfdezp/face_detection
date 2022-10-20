@@ -33,7 +33,7 @@
 #define PWM_PERIOD			0x00030d40 /* 200,000 -> 2ms (max position) */
 #define MIN_POS				0x000186a0 /* 100,000 -> 1ms (min position) */
 #define NEUTRAL_POS                 	0x000249f0 /* 150,000 -> 1.5ms  */
-#define DEADBAND_WIDTH              	0x000002bc /* 700     -> 7us    */
+#define DEADBAND_WIDTH             	0x000002bc /* 700     -> 7us    */
 
 /**************************** GLOBAL VARIABLES ********************************/
 uint32_t PageSize=4000;
@@ -346,6 +346,7 @@ cv::Mat process_result(cv::Mat &m1, const vitis::ai::FaceDetectResult &result, b
         cv::rectangle(image,cv::Rect{cv::Point(r.x * image.cols, r.y * image.rows),cv::Size{(int)(r.width * image.cols),(int)(r.height * image.rows)}},0xff);
 
         cv::circle(image, cv::Point(r.x * image.cols + r.width*image.cols*0.5, r.y * image.rows + r.height*image.rows*0.5), 3, 0xff);
+	cv::rectangle(image, cv::Rect{cv::Point(615, 30), cv::Size{(int)(585), (int)(300)}}, 0xff);
         center = cv::Point(r.x*image.cols + r.width*image.cols*0.5, r.y*image.rows+r.height*image.rows*0.5);
         x_pos = r.x*image.cols + r.width*image.cols*0.5;
         y_pos = r.y*image.rows + r.height*image.rows*0.5;
