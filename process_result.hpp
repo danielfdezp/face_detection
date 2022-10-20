@@ -19,21 +19,21 @@
 
 /*********************************** FLAGS ************************************/
 #define XTC_CSR_ENABLE_TMR_MASK		0x00000080 
-#define XTC_CSR_LOAD_MASK			    0x00000020
+#define XTC_CSR_LOAD_MASK		0x00000020
 #define XTC_CSR_ENABLE_PWM_MASK  	0x00000200 
 #define XTC_CSR_EXT_GENERATE_MASK	0x00000004 
 #define XTC_CSR_DOWN_COUNT_MASK 	0x00000002 
 #define XTC_CSR_AUTO_RELOAD_MASK	0x00000010 
-#define XTC_CSR_CASC_MASK			    0x00000800 
+#define XTC_CSR_CASC_MASK		0x00000800 
 #define XTC_CSR_CAPTURE_MODE_MASK	0x00000001 
 #define XTC_CSR_ENABLE_ALL_MASK		0x00000400 
 #define XTC_CSR_INT_OCCURED_MASK	0x00000100 
 
 /******************************* PWM VALUES ***********************************/
-#define PWM_PERIOD					        0x00030d40 /* 200,000 -> 2ms (max position) */
-#define MIN_POS					            0x000186a0 /* 100,000 -> 1ms (min position) */
-#define NEUTRAL_POS                 0x000249f0 /* 150,000 -> 1.5ms  */
-#define DEADBAND_WIDTH              0x000002bc /* 700     -> 7us    */
+#define PWM_PERIOD			0x00030d40 /* 200,000 -> 2ms (max position) */
+#define MIN_POS				0x000186a0 /* 100,000 -> 1ms (min position) */
+#define NEUTRAL_POS                 	0x000249f0 /* 150,000 -> 1.5ms  */
+#define DEADBAND_WIDTH              	0x000002bc /* 700     -> 7us    */
 
 /**************************** GLOBAL VARIABLES ********************************/
 uint32_t PageSize=4000;
